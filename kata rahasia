@@ -1,0 +1,11 @@
+kata_rahasia = "python"
+
+while True:
+    tebakan = input("Tebak kata rahasianya: ")
+
+    if tebakan.lower() == kata_rahasia:
+        print("Kamu benar!")
+        break
+    else:
+        print("Salah, coba lagi!")
+        

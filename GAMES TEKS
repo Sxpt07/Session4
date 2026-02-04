@@ -1,0 +1,35 @@
+inventaris = []
+ruangan_sekarang = "Perpustakaan"
+
+print("=== Petualangan Mencari Jalan Keluar ===")
+print("Perintah: 'ambil kunci', 'selatan', 'utara', 'buka pintu'")
+
+while True:
+    print(f"\nLokasi: {ruangan_sekarang}")
+    aksi = input("Tindakanmu: ").lower()
+
+    if ruangan_sekarang == "Perpustakaan":
+        if aksi == "ambil kunci":
+            if "kunci" not in inventaris:
+                inventaris.append("kunci")
+                print("Berhasil! Kunci sekarang ada di inventaris.")
+            else:
+                print("Kamu sudah mengambil kunci ini.")
+        elif aksi == "selatan":
+            ruangan_sekarang = "Koridor"
+            print("Kamu berjalan ke Koridor.")
+        else:
+            print("Kamu tidak bisa melakukan itu di sini.")
+
+    elif ruangan_sekarang == "Koridor":
+        if aksi == "utara":
+            ruangan_sekarang = "Perpustakaan"
+            print("Kamu kembali ke Perpustakaan.")
+        elif aksi == "buka pintu":
+            if "kunci" in inventaris:
+                print("Pintu terbuka! Kamu berhasil keluar dan menang! 🚀")
+                break
+            else:
+                print("Pintu terkunci. Kamu butuh kunci dari Perpustakaan.")
+        else:
+            print("Perintah salah, coba lagi.")

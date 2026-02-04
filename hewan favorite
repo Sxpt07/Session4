@@ -1,0 +1,4 @@
+daftar_hewan = ["Kucing", "Harimau", "Elang", "Panda"]
+
+for hewan in daftar_hewan:
+    print(f"Hewan {hewan} adalah hewan yang keren!")
